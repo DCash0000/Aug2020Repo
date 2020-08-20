@@ -47,3 +47,8 @@ function alphabetPosition(text) {
     }
     return frndGroup
   }
+
+  console.log("Hello World");
+  console.log("Goodbye World!");
+  console.log("I need a break");
+  console.log("Time for that break");
