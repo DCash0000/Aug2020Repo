@@ -52,3 +52,43 @@ function alphabetPosition(text) {
   console.log("Goodbye World!");
   console.log("I need a break");
   console.log("Time for that break");
+
+  // <-- 08/24/2020 -->
+  
+  //find the outlier in an array of either all even or odd integers
+  function findOutlier(integers){
+    var evens = [];
+    var odds = [];
+    for (var i = 0; i < integers.length; i++) 
+    {
+        if ((integers[i] % 2) == 0) 
+        {
+            evens.push(integers[i]);
+        } 
+        else 
+        {
+            odds.push(integers[i]);
+        }
+    }
+    var elen = evens.length;
+    var olen = odds.length;
+ 
+    if (elen > olen)
+    {
+        return odds[0];
+    } 
+    else 
+    {
+        return evens[0];
+    }
+ }
+ 
+
+ //return the highest and lowest numbers in a string of spaced numbers
+
+ function highAndLow(numbers){
+  // ...
+  numbers = numbers.split(" ");
+  return Math.max.apply(null, numbers) + " " + Math.min.apply(null, numbers)
+}
+console.log(highAndLow);
