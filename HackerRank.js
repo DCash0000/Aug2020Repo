@@ -92,3 +92,21 @@ function alphabetPosition(text) {
   return Math.max.apply(null, numbers) + " " + Math.min.apply(null, numbers)
 }
 console.log(highAndLow);
+
+//Take a short string with each word of the string having a number in it that corresponds witht the words place in the string
+function order(words){
+  if(words === ""){
+    return "";
+  }
+  var array = [];
+  words = words.split(" ");
+  var j = 1;
+  for(var i = 0; i<words.length; i++){
+    if(words[i].indexOf(j) > -1){
+     array.push(words[i]);
+    j++;
+    i=-1;
+    }
+  }
+return array.join(" ");
+}
