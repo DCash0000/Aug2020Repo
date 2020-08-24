@@ -110,3 +110,4 @@ function order(words){
   }
 return array.join(" ");
 }
+console.log(order);
