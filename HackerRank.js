@@ -111,3 +111,16 @@ function order(words){
 return array.join(" ");
 }
 console.log(order);
+
+//implement a difference function, which subtracts one list from another and returns the result
+function arrayDiff(a, b) {
+  let difArray = []
+  
+  for( let i = 0; i < a.length; i++){
+    let elem = a[i]
+    if(b.indexOf(elem) === -1){
+      difArray.push(elem)
+    }
+  }
+  return difArray
+}
