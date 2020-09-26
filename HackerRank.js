@@ -203,3 +203,13 @@ function solution(number){
   return romanStr;
  }
 
+ //Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+ var moveZeros = function (arr) {
+  let resultArr = [];
+  let zerosArr = [];
+  arr.map(item => item === 0 ? zerosArr.push(0) : resultArr.push(item));
+
+  return resultArr.concat(zerosArr);
+}
+
+
