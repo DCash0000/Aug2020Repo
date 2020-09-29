@@ -212,7 +212,7 @@ function solution(number){
   return resultArr.concat(zerosArr);
 }
 
-
+//****finish */
 //This time we want to write calculations using functions and get the results
 function one    (calculate) { return calculate ? calculate(1) : 1 }
 function two    (calculate) { return calculate ? calculate(2) : 2 }
@@ -234,4 +234,14 @@ function dividedBy(y) { return function (x) {
 }
 
 seven(minus(five()))
+
+//Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+function persistence(num) {
+  let i = 0;
+  while (num.toString().length !== 1) {
+    num = num.toString().split("").reduce((a,b)=>a*b);
+    i++;
+  }
+  return i;
+}
 
