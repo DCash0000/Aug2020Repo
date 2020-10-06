@@ -245,3 +245,19 @@ function persistence(num) {
   return i;
 }
 
+//Write a function that when given a URL as a string, parses out just the domain name and returns it as a string.
+function domainName(url){
+  let arr;
+  if (/www/.test(url)) {
+    arr = url.split('.');
+    return arr[1];
+  } else if (/http/.test(url)) {
+    arr = url.split('//');
+    arr = arr[1].split('.');
+    return arr[0];
+  } else {
+    arr = url.split('.');
+    return arr[0];
+  }
+}
+
