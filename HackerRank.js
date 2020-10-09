@@ -276,3 +276,18 @@ function snail(array){
   }
   return sorted
 }
+
+//Given a list of integers and a single sum value, return the first two values (parse from the left please) in order of appearance that add up to form the sum.
+function sum_pairs(ints, s){
+  var seenNumbers = {};
+  
+  for(var i = 0; i < ints.length; i++){
+    if(seenNumbers.hasOwnProperty(s - ints[i])){
+      return[s - ints[i], ints[i]];
+    }else{
+      seenNumbers[ints[i]] = true;
+    }
+  }
+  return undefined;
+
+}
