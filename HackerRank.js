@@ -313,3 +313,14 @@ function removeNb(n) {
   const acc = n*(n+1)/2;
   return Array.prototype.concat.apply([], arr.map(i => arr.map(x => [i,x]))) .filter(([a,b])=>  a * b == acc - a - b )
 }
+
+//The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.
+function rgb(r, g, b){
+  return toHex(r)+toHex(g)+toHex(b);
+}
+
+function toHex(d) {
+    if(d < 0 ) {return "00";}
+    if(d > 255 ) {return "FF";}
+    return  ("0"+(Number(d).toString(16))).slice(-2).toUpperCase()  //I like this padding part.
+}
